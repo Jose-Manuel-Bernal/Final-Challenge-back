@@ -6,10 +6,12 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Document
-public class Provider {
+public class Inventory {
 
     @Id
     private String id;
-    private String name;
-    private String phoneNumber;
+    private Integer max;
+    private Integer min;
+    private Integer stock;
+    private Product product;
 }

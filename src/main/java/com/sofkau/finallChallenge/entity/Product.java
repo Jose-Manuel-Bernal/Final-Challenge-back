@@ -6,10 +6,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
 @Document
-public class Provider {
+public class Product {
 
     @Id
     private String id;
     private String name;
-    private String phoneNumber;
+    private Double price;
+    private Provider provider;
 }
