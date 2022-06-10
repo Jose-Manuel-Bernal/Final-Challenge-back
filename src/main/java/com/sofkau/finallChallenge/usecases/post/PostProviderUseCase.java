@@ -1,4 +1,4 @@
-package com.sofkau.finallChallenge.usecases.put;
+package com.sofkau.finallChallenge.usecases.post;
 
 import com.sofkau.finallChallenge.dto.ProviderDTO;
 import com.sofkau.finallChallenge.mapper.ProviderMapper;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 @Service
-public class PutProviderUseCase {
+public class PostProviderUseCase {
     private ProviderRepository repository;
     private ProviderMapper mapper;
 
-    public PutProviderUseCase(ProviderRepository repository, ProviderMapper mapper) {
+    public PostProviderUseCase(ProviderRepository repository, ProviderMapper mapper) {
         this.repository = repository;
         this.mapper = mapper;
     }
