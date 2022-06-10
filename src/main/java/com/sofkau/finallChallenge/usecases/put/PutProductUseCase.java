@@ -11,6 +11,11 @@ public class PutProductUseCase {
     private ProductRepository repository;
     private ProductMapper mapper;
 
+    public PutProductUseCase(ProductRepository repository, ProductMapper mapper) {
+        this.repository = repository;
+        this.mapper = mapper;
+    }
+
     public Mono<ProductDTO> apply (ProductDTO productDTO) {
         return repository.save(mapper.toProductEntity(productDTO)).map(product -> mapper.toProductDTO(product));
     }

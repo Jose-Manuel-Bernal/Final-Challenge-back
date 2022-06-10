@@ -1,7 +1,7 @@
 package com.sofkau.finallChallenge.mapper;
 
-import com.sofkau.finallChallenge.dto.ProductDTO;
-import com.sofkau.finallChallenge.entity.Product;
+import com.sofkau.finallChallenge.dto.ProviderDTO;
+import com.sofkau.finallChallenge.entity.Provider;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 import org.springframework.web.reactive.config.EnableWebFlux;
@@ -16,7 +16,7 @@ public class ProviderMapper {
         this.modelMapper = modelMapper;
     }
 
-    public ProductDTO toProductDTO(Product product){return modelMapper.map(product, ProductDTO.class);}
+    public ProviderDTO toProviderDTO(Provider provider){return modelMapper.map(provider, ProviderDTO.class);}
 
-    public Product toProductEntity(ProductDTO productDTO){return modelMapper.map(productDTO, Product.class);}
+    public Provider toProviderEntity(ProviderDTO providerDTO){return modelMapper.map(providerDTO, Provider.class);}
 }
