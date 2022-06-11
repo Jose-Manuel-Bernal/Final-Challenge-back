@@ -1,10 +1,7 @@
 package com.sofkau.finallChallenge.routes.provider;
 
-import com.sofkau.finallChallenge.dto.ProductDTO;
 import com.sofkau.finallChallenge.dto.ProviderDTO;
-import com.sofkau.finallChallenge.entity.Product;
 import com.sofkau.finallChallenge.entity.Provider;
-import com.sofkau.finallChallenge.usecases.product.PostProductUseCase;
 import com.sofkau.finallChallenge.usecases.provider.PostProviderUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;

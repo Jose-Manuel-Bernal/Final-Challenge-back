@@ -1,7 +1,8 @@
-package com.sofkau.finallChallenge.routes.provider;
+package com.sofkau.finallChallenge.routes.bill;
 
-import com.sofkau.finallChallenge.entity.Provider;
-import com.sofkau.finallChallenge.usecases.provider.GetAllProvidersUseCase;
+import com.sofkau.finallChallenge.dto.BillDTO;
+import com.sofkau.finallChallenge.entity.Bill;
+import com.sofkau.finallChallenge.usecases.bill.GetAllBillsUseCase;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -20,21 +21,21 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import static org.springframework.web.reactive.function.server.RouterFunctions.route;
 
 @Configuration
-public class GetProvidersRoute {
+public class GetBillsRoute {
 
     @Bean
-    @RouterOperation(path = "/get/providers", produces = {
+    @RouterOperation(path = "/get/bills", produces = {
             MediaType.APPLICATION_JSON_VALUE},
-            beanClass = GetAllProvidersUseCase.class, method = RequestMethod.GET, beanMethod = "apply",
-            operation = @Operation(operationId = "geAllProviders", responses = {
+            beanClass = GetAllBillsUseCase.class, method = RequestMethod.GET, beanMethod = "apply",
+            operation = @Operation(operationId = "geAllBills", responses = {
                     @ApiResponse(responseCode = "200", description = "successful operation",
-                            content = @Content(schema = @Schema(implementation = Provider.class))),
-                    @ApiResponse(responseCode = "400", description = "Invalid Provider details supplied")}
+                            content = @Content(schema = @Schema(implementation = Bill.class))),
+                    @ApiResponse(responseCode = "400", description = "Invalid Bills details supplied")}
             ))
 
-    public RouterFunction<ServerResponse> getAllProviders (GetAllProvidersUseCase useCase) {
-        return route(GET("/get/providers"),
+    public RouterFunction<ServerResponse> getAllBills (GetAllBillsUseCase useCase) {
+        return route(GET("/get/bills"),
                 request -> ServerResponse.status(HttpStatus.OK).contentType(MediaType.APPLICATION_JSON)
-                        .body(BodyInserters.fromProducer(useCase.apply(), Provider.class)));
+                        .body(BodyInserters.fromProducer(useCase.apply(), BillDTO.class)));
     }
 }
