@@ -2,6 +2,7 @@ package com.sofkau.finallChallenge.routes.product;
 
 import com.sofkau.finallChallenge.dto.ProductDTO;
 import com.sofkau.finallChallenge.usecases.product.GetAllProductsUseCase;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -14,6 +15,8 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 
 @Configuration
 public class GetProductsRoute {
+
+    @Bean
 
     public RouterFunction<ServerResponse> getAllProducts (GetAllProductsUseCase useCase) {
         return route(GET("/get/products"),

@@ -1,6 +1,7 @@
 package com.sofkau.finallChallenge.routes.product;
 
 import com.sofkau.finallChallenge.usecases.product.DeleteProductUseCAse;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -14,6 +15,7 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @Configuration
 public class DeleteProductRoute {
 
+    @Bean
     public RouterFunction<ServerResponse> deleteProduct (DeleteProductUseCAse useCAse) {
         return route(DELETE("/delete/product/{id}").and(accept(MediaType.APPLICATION_JSON)),
                 request -> useCAse.apply(request.pathVariable("id"))

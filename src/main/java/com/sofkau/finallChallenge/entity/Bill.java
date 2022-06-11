@@ -8,7 +8,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Data
-@Document
+@Document(collection = "bills")
 public class Bill {
 
     @Id

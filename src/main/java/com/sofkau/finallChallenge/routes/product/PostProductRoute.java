@@ -2,6 +2,7 @@ package com.sofkau.finallChallenge.routes.product;
 
 import com.sofkau.finallChallenge.dto.ProductDTO;
 import com.sofkau.finallChallenge.usecases.product.PostProductUseCase;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -15,7 +16,8 @@ import static org.springframework.web.reactive.function.server.RouterFunctions.r
 @Configuration
 public class PostProductRoute {
 
-    private RouterFunction<ServerResponse> postProduct (PostProductUseCase useCase) {
+    @Bean
+    public RouterFunction<ServerResponse> postProduct (PostProductUseCase useCase) {
         return route(POST("/post/product").and(accept(MediaType.APPLICATION_JSON)),
                 request -> request.bodyToMono(ProductDTO.class)
                         .flatMap(useCase::apply)
