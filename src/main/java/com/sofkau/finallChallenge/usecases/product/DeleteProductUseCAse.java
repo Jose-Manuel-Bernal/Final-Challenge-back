@@ -1,4 +1,4 @@
-package com.sofkau.finallChallenge.usecases.delete;
+package com.sofkau.finallChallenge.usecases.product;
 
 import com.sofkau.finallChallenge.mapper.ProductMapper;
 import com.sofkau.finallChallenge.repository.ProductRepository;

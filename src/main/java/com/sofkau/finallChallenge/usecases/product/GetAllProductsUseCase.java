@@ -1,4 +1,4 @@
-package com.sofkau.finallChallenge.usecases.get;
+package com.sofkau.finallChallenge.usecases.product;
 
 import com.sofkau.finallChallenge.dto.ProductDTO;
 import com.sofkau.finallChallenge.mapper.ProductMapper;

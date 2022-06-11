@@ -1,6 +1,6 @@
-package com.sofkau.finallChallenge.routes.delete;
+package com.sofkau.finallChallenge.routes.product;
 
-import com.sofkau.finallChallenge.usecases.delete.DeleteProductUseCAse;
+import com.sofkau.finallChallenge.usecases.product.DeleteProductUseCAse;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

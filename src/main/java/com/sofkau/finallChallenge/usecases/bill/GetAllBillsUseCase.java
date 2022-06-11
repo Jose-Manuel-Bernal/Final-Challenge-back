@@ -1,4 +1,4 @@
-package com.sofkau.finallChallenge.usecases.get;
+package com.sofkau.finallChallenge.usecases.bill;
 
 import com.sofkau.finallChallenge.dto.BillDTO;
 import com.sofkau.finallChallenge.mapper.BillMapper;

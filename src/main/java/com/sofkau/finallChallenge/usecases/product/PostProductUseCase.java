@@ -1,4 +1,4 @@
-package com.sofkau.finallChallenge.usecases.put;
+package com.sofkau.finallChallenge.usecases.product;
 
 import com.sofkau.finallChallenge.dto.ProductDTO;
 import com.sofkau.finallChallenge.mapper.ProductMapper;
@@ -7,11 +7,11 @@ import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
 @Service
-public class PutProductUseCase {
+public class PostProductUseCase {
     private ProductRepository repository;
     private ProductMapper mapper;
 
-    public PutProductUseCase(ProductRepository repository, ProductMapper mapper) {
+    public PostProductUseCase(ProductRepository repository, ProductMapper mapper) {
         this.repository = repository;
         this.mapper = mapper;
     }

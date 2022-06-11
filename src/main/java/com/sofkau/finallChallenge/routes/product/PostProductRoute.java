@@ -1,7 +1,7 @@
-package com.sofkau.finallChallenge.routes.post;
+package com.sofkau.finallChallenge.routes.product;
 
 import com.sofkau.finallChallenge.dto.ProductDTO;
-import com.sofkau.finallChallenge.usecases.post.PostProductUseCase;
+import com.sofkau.finallChallenge.usecases.product.PostProductUseCase;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;

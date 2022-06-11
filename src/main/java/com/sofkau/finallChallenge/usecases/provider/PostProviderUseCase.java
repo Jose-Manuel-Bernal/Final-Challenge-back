@@ -1,4 +1,4 @@
-package com.sofkau.finallChallenge.usecases.post;
+package com.sofkau.finallChallenge.usecases.provider;
 
 import com.sofkau.finallChallenge.dto.ProviderDTO;
 import com.sofkau.finallChallenge.mapper.ProviderMapper;
