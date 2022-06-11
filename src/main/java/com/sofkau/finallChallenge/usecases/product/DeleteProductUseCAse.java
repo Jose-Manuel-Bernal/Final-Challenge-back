@@ -16,7 +16,7 @@ public class DeleteProductUseCAse {
     }
 
     public Mono<Void> apply (String id) {
-        return repository.findById(id).switchIfEmpty(Mono.error(new IllegalStateException("The preoduct doesn't exist")))
+        return repository.findById(id).switchIfEmpty(Mono.error(new IllegalStateException("The product doesn't exist")))
                 .flatMap(product -> repository.deleteById(product.getId()));
     }
 }

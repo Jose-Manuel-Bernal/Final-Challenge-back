@@ -1,6 +1,5 @@
 package com.sofkau.finallChallenge.usecases.receipt;
 
-import com.sofkau.finallChallenge.dto.ProductDTO;
 import com.sofkau.finallChallenge.dto.ReceiptDTO;
 import com.sofkau.finallChallenge.mapper.ReceiptMapper;
 import com.sofkau.finallChallenge.repository.ReceiptRepository;
