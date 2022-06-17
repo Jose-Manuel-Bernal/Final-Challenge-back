@@ -6,6 +6,8 @@ import com.sofkau.finallChallenge.repository.ReceiptRepository;
 import org.springframework.stereotype.Service;
 import reactor.core.publisher.Mono;
 
+import java.time.LocalDate;
+
 @Service
 public class PostReceiptUseCase {
     private ReceiptRepository repository;
@@ -17,6 +19,7 @@ public class PostReceiptUseCase {
     }
 
     public Mono<ReceiptDTO> apply (ReceiptDTO receiptDTO) {
+        receiptDTO.setDate(LocalDate.now());
         return repository.save(mapper.toReceiptEntity(receiptDTO)).map(receipt -> mapper.toReceiptDTO(receipt));
     }
 }
