@@ -56,17 +56,12 @@ public class GetAllReceiptsUseCaseTest {
         product2.setName("name2");
         product2.setPrice(100.0);
         product2.setProvider(provider2);
-        List<Product> listproducts = new ArrayList<>();
-        listproducts.add(product1);
-        listproducts.add(product2);
         receipt1.setId("01");
         receipt1.setDate(LocalDate.of(2020, 1, 8));
-        receipt1.setProductList(listproducts);
-        receipt1.setProviderName("providerName1");
+        receipt1.setProduct(product1);
         receipt2.setId("02");
         receipt2.setDate(LocalDate.of(2021, 1, 8));
-        receipt2.setProductList(listproducts);
-        receipt2.setProviderName("providerName2");
+        receipt2.setProduct(product2);
 
         Mockito.when(repository.findAll()).thenReturn(Flux.just(receipt1, receipt2));
         Flux<ReceiptDTO> flux = useCase.apply();
