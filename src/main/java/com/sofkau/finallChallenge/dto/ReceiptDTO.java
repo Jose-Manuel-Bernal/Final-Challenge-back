@@ -12,6 +12,6 @@ import java.util.List;
 public class ReceiptDTO {
     private String id;
     private LocalDate date;
-    private List<Product> productList;
-    private String providerName;
+    private Product product;
+    private Integer amount;
 }
